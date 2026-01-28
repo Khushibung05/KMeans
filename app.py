@@ -185,7 +185,7 @@ if uploaded_file is not None:
         # -----------------------------
         st.subheader("📊 Customer Clusters Visualization")
 
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(figsize=(6, 4))
         ax.scatter(
             df[feature_1],
             df[feature_2],
@@ -198,7 +198,7 @@ if uploaded_file is not None:
         ax.scatter(
             centers[:, 0],
             centers[:, 1],
-            s=300,
+            s=200,
             c="black",
             marker="X",
             label="Cluster Centers"
@@ -261,3 +261,4 @@ if uploaded_file is not None:
 
 else:
     st.warning("Please upload a CSV dataset to begin clustering.")
+
